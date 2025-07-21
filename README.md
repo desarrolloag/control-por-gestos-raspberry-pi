@@ -122,9 +122,7 @@ python3 "Envío de comandos según pose.py"
 ---
 
 ### **Parte 5 de 5: Contacto**
-Finalmente, copia y pega este último bloque.
 
-```markdown
 ### **🙋 ¿Necesitas Ayuda?**
 Si tienes dudas, puedes contactar al ingeniero que desarrolló este ejemplo:
 
