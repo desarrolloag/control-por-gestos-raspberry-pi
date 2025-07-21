@@ -108,17 +108,12 @@ Este script envía palabras clave por el puerto serie. Un aparato que esté escu
 
 Estos son los comandos que envía:
 
-newpr: "¡Hola, veo a alguien nuevo!". Se envía cuando se detecta al menos una persona.
-
-manoi: "¡Mano izquierda arriba!". Se envía cuando una persona levanta la mano izquierda.
-
-manod: "¡Mano derecha arriba!". Se envía cuando una persona levanta la mano derecha.
-
-manos: "¡Las dos manos arriba!". Se envía cuando una persona levanta ambas manos.
-
-cruze: "¡Brazos cruzados, alto!". Se envía cuando una persona cruza los brazos.
-
-noone: "Ya no veo a nadie, adiós.". Se envía cuando no se detectan personas en el cuadro.
+* newpr: "¡Hola, veo a alguien nuevo!". Se envía cuando se detecta al menos una persona.
+* manoi: "¡Mano izquierda arriba!". Se envía cuando una persona levanta la mano izquierda.
+* manod: "¡Mano derecha arriba!". Se envía cuando una persona levanta la mano derecha.
+* manos: "¡Las dos manos arriba!". Se envía cuando una persona levanta ambas manos.
+* cruze: "¡Brazos cruzados, alto!". Se envía cuando una persona cruza los brazos.
+* noone: "Ya no veo a nadie, adiós.". Se envía cuando no se detectan personas en el cuadro.
 
 Para empezar, ve a la carpeta src en la terminal y ejecuta:
 ```bash
@@ -127,16 +122,14 @@ python3 "Envío de comandos según pose.py"
 ---
 
 ### **Parte 5 de 5: Contacto**
-
 Finalmente, copia y pega este último bloque.
 
 ```markdown
 ### **🙋 ¿Necesitas Ayuda?**
-
 Si tienes dudas, puedes contactar al ingeniero que desarrolló este ejemplo:
 
-**Ing. Abraham Solano Carrasco**
+* **Ing. Abraham Solano Carrasco**
 * **Email**: asolano@agelectronica.mx
 * **WhatsApp**: 55 54689360
 * **Sitio Web de AG Electrónica**: [agelectronica.com](https://www.agelectronica.com/tarjetas)
-```
+
