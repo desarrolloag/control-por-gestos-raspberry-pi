@@ -21,11 +21,11 @@ Imagina que puedes controlar las luces de tu cuarto... ¡con solo levantar la ma
 
 Este proyecto tiene dos versiones o "modos":
 
-1.  **Modo Control de Luces Mágico**: Usamos un programa que mira a través de la cámara y, cuando levantas una mano, ¡prende una luz! Si levantas la otra, ¡prende otra luz! [cite_start]Funciona conectando foquitos (LEDs) o relevadores directamente a la Raspberry Pi[cite: 10, 241, 252].
+1.  **Modo Control de Luces Mágico**: Usamos un programa que mira a través de la cámara y, cuando levantas una mano, ¡prende una luz! Si levantas la otra, ¡prende otra luz! Funciona conectando foquitos (LEDs) o relevadores directamente a la Raspberry Pi.
 
-2.  [cite_start]**Modo Mensajes Secretos**: Usamos otro programa que también entiende tus gestos, pero en vez de prender luces, envía "comandos" o mensajes secretos por un cable a otro aparato. Así, podrías controlar un robot, un carrito o lo que se te ocurra.
+2.  **Modo Mensajes Secretos**: Usamos otro programa que también entiende tus gestos, pero en vez de prender luces, envía "comandos" o mensajes secretos por un cable a otro aparato. Así, podrías controlar un robot, un carrito o lo que se te ocurra.
 
-[cite_start]Lo más genial es que la cámara tiene su propio cerebro (un chip llamado IMX500) que hace todo el trabajo pesado de pensar, así que la Raspberry Pi queda libre y rápida[cite: 10, 12].
+Lo más genial es que la cámara tiene su propio cerebro (un chip llamado IMX500) que hace todo el trabajo pesado de pensar, así que la Raspberry Pi queda libre y rápida.
 
 ### **✨ Los Superpoderes de Nuestro Proyecto**
 
@@ -37,49 +37,51 @@ Este proyecto tiene dos versiones o "modos":
     * Cruzas los brazos para decir "¡Alto!".
 * **Detector de Presencia**: Se da cuenta si hay alguien en el cuarto y puede prender una luz general.
 
+---
+
 ### **🛠️ Tu Kit de Inventor (Materiales)**
 
-[cite_start]Para construir este proyecto, necesitas las piezas que vienen en el "Kit Inicial de IA Raspberry Pi® 5 4GB"[cite: 4, 5].
-* [cite_start]Una mini computadora **Raspberry Pi 5**[cite: 18].
-* [cite_start]El **Módulo de cámara con IA** (¡los ojos del proyecto!)[cite: 22].
-* [cite_start]Una **Tarjeta MicroSD** de 64 GB (la memoria)[cite: 30].
-* [cite_start]**Fuente de alimentación** USB-C (para darle energía)[cite: 25].
-* [cite_start]Un **Disipador de calor** (un ventilador para que no se caliente)[cite: 33].
-* [cite_start]Un **Cable micro HDMI a HDMI** (para conectarla a una pantalla)[cite: 39].
+Para construir este proyecto, necesitas las piezas que vienen en el "Kit Inicial de IA Raspberry Pi® 5 4GB".
+* Una mini computadora **Raspberry Pi 5**.
+* El **Módulo de cámara con IA** (¡los ojos del proyecto!).
+* Una **Tarjeta MicroSD** de 64 GB (la memoria).
+* **Fuente de alimentación** USB-C (para darle energía).
+* Un **Disipador de calor** (un ventilador para que no se caliente).
+* Un **Cable micro HDMI a HDMI** (para conectarla a una pantalla).
 * Unos foquitos **LEDs** y cables para hacer las pruebas de luces.
 
 ### **🔧 La Receta Secreta (Instalación)**
 
 Antes de usar los programas, hay que preparar nuestra Raspberry Pi. ¡Es como instalar un videojuego!
 
-1.  [cite_start]**Instala el "Cerebro" del Sistema**: Con la herramienta "Raspberry Pi Imager", instala el sistema operativo **Raspberry Pi OS (64-bit)** en tu tarjeta MicroSD[cite: 53].
+1.  **Instala el "Cerebro" del Sistema**: Con la herramienta "Raspberry Pi Imager", instala el sistema operativo **Raspberry Pi OS (64-bit)** en tu tarjeta MicroSD.
 
-2.  [cite_start]**Ponlo al Día**: Abre una ventana de "Terminal" y escribe esto para actualizar todo a la última versión[cite: 59].
+2.  **Ponlo al Día**: Abre una ventana de "Terminal" y escribe esto para actualizar todo a la última versión.
     ```bash
     sudo apt update && sudo apt full-upgrade -y
     ```
 
-3.  [cite_start]**Instala los "Drivers" de la Cámara**: Ahora, instala el software especial para que la Raspberry Pi pueda hablar con la cámara con IA[cite: 89].
+3.  **Instala los "Drivers" de la Cámara**: Ahora, instala el software especial para que la Raspberry Pi pueda hablar con la cámara con IA.
     ```bash
     sudo apt install imx500-all
     ```
 
-4.  **Dale Herramientas Extra a Python**: Python es el lenguaje con el que están escritos nuestros programas. [cite_start]Vamos a darle unas herramientas extra que necesita[cite: 144].
+4.  **Dale Herramientas Extra a Python**: Python es el lenguaje con el que están escritos nuestros programas. Vamos a darle unas herramientas extra que necesita.
     ```bash
     sudo apt install python3-opencv python3-munkres
     ```
 
-5.  [cite_start]**Reinicia**: Para que todos los cambios funcionen, reinicia tu Raspberry Pi[cite: 91].
+5.  **Reinicia**: Para que todos los cambios funcionen, reinicia tu Raspberry Pi.
     ```bash
     sudo reboot
     ```
 
 6.  **Activa el Puerto de Mensajes Secretos** (sólo si usarás el script de comandos seriales):
-    * [cite_start]En la terminal, escribe `sudo raspi-config`[cite: 347].
-    * [cite_start]Usa las flechas para ir a `Interface Options` > `Serial Port`[cite: 348].
+    * En la terminal, escribe `sudo raspi-config`.
+    * Usa las flechas para ir a `Interface Options` > `Serial Port`.
     * Te preguntará si quieres una consola de login, dile que **No**.
-    * [cite_start]Luego te preguntará si quieres habilitar el puerto de hardware, dile que **Sí**[cite: 349].
-    * Termina y reinicia la Raspberry Pi. [cite_start]¡El puerto para enviar mensajes ya está abierto! [cite: 350]
+    * Luego te preguntará si quieres habilitar el puerto de hardware, dile que **Sí**.
+    * Termina y reinicia la Raspberry Pi. ¡El puerto para enviar mensajes ya está abierto!
 
 ---
 
@@ -91,13 +93,50 @@ Ya que tienes todo instalado, ¡es hora de la acción!
 
 Conecta tus foquitos LED a los pines correctos de la Raspberry Pi. Un pin es como un enchufe chiquito.
 
-* [cite_start]Pin GPIO 17: Para la luz de la mano izquierda[cite: 284].
-* [cite_start]Pin GPIO 18: Para la luz de la mano derecha[cite: 285].
-* [cite_start]Pin GPIO 22: Para la luz de ambas manos[cite: 286].
-* [cite_start]Pin GPIO 23: Para la luz que avisa si hay alguien[cite: 287].
+* Pin GPIO 17: Para la luz de la mano izquierda.
+* Pin GPIO 18: Para la luz de la mano derecha.
+* Pin GPIO 22: Para la luz de ambas manos.
+* Pin GPIO 23: Para la luz que avisa si hay alguien.
 * Pin GPIO 24: Para la luz que se activa al cruzar los brazos.
 
 Para empezar, ve a la carpeta `src` en la terminal y ejecuta este comando:
-
 ```bash
 python3 "Control de luminarias por detección de pose.py"
+```
+#### **Modo 2: Envío de Comandos Secretos**
+Este script envía palabras clave por el puerto serie. Un aparato que esté escuchando puede recibir estos "mensajes secretos" y hacer algo.
+
+Estos son los comandos que envía:
+
+newpr: "¡Hola, veo a alguien nuevo!". Se envía cuando se detecta al menos una persona.
+
+manoi: "¡Mano izquierda arriba!". Se envía cuando una persona levanta la mano izquierda.
+
+manod: "¡Mano derecha arriba!". Se envía cuando una persona levanta la mano derecha.
+
+manos: "¡Las dos manos arriba!". Se envía cuando una persona levanta ambas manos.
+
+cruze: "¡Brazos cruzados, alto!". Se envía cuando una persona cruza los brazos.
+
+noone: "Ya no veo a nadie, adiós.". Se envía cuando no se detectan personas en el cuadro.
+
+Para empezar, ve a la carpeta src en la terminal y ejecuta:
+```bash
+python3 "Envío de comandos según pose.py"
+```
+---
+
+### **Parte 5 de 5: Contacto**
+
+Finalmente, copia y pega este último bloque.
+
+```markdown
+### **🙋 ¿Necesitas Ayuda?**
+
+Si tienes dudas, puedes contactar al ingeniero que desarrolló este ejemplo:
+
+**Ing. Abraham Solano Carrasco**
+* **Email**: asolano@agelectronica.mx
+* **WhatsApp**: 55 54689360
+* **Sitio Web de AG Electrónica**: [agelectronica.com](https://www.agelectronica.com/tarjetas)
+```
