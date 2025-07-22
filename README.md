@@ -149,6 +149,7 @@ Para empezar, ve a la carpeta `src` en la terminal y ejecuta este comando:
 ```bash
 python3 "Control de luminarias por detección de pose.py"
 ```
+![Demostración del control por gestos](https://github.com/desarrolloag/control-por-gestos-raspberry-pi/blob/295d23001d9c5e343f857db78d1a7ed54aab0046/control-por-gestos-corporales.gif)
 #### **Modo 2: Envío de Comandos Secretos**
 Este script envía palabras clave por el puerto serie. Un aparato que esté escuchando puede recibir estos "mensajes secretos" y hacer algo.
 
