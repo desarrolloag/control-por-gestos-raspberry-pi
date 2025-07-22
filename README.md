@@ -1,4 +1,4 @@
-# ¡Crea un Guardián Inteligente con tu Raspberry Pi! 👋🤖
+# ¡Crea un Controlador de Luminarias Inteligente con tu Raspberry Pi! 👋🤖
 
 ¡Hola! Este es un proyecto súper genial desarrollado por **AG Electrónica SAPI de CV** donde le daremos superpoderes a una cámara. Usaremos una **Raspberry Pi** (una mini computadora) y una **cámara con Inteligencia Artificial** para que entienda nuestros gestos.
 
