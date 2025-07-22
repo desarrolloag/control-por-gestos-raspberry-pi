@@ -12,7 +12,9 @@ Imagina que puedes controlar las luces de tu cuarto... ¡con solo levantar la ma
 * [Los Superpoderes de Nuestro Proyecto](#-los-superpoderes-de-nuestro-proyecto)
 * [Tu Kit de Inventor (Materiales)](#-tu-kit-de-inventor-materiales)
 * [La Receta Secreta (Instalación)](#-la-receta-secreta-instalación)
-* [¡A Jugar! (Cómo Usarlo)](#-a-jugar-cómo-usarlo)
+* [Demostraciones Prácticas (del Kit)](#-demostraciones-prácticas-del-kit)
+* [Uso Avanzado: Ejemplos de Picamera2](#-uso-avanzado-ejemplos-de-picamera2)
+* [¡A Jugar! (Nuestros Scripts Personalizados)](#-a-jugar-nuestros-scripts-personalizados)
 * [¿Necesitas Ayuda?](#-necesitas-ayuda)
 
 ---
@@ -25,7 +27,7 @@ Este proyecto tiene dos versiones o "modos":
 
 2.  **Modo Mensajes Secretos**: Usamos otro programa que también entiende tus gestos, pero en vez de prender luces, envía "comandos" o mensajes secretos por un cable a otro aparato. Así, podrías controlar un robot, un carrito o lo que se te ocurra.
 
-Lo más genial es que la cámara tiene su propio cerebro (un chip llamado IMX500) que hace todo el trabajo pesado de pensar, así que la Raspberry Pi queda libre y rápida.
+[cite_start]Lo más genial es que la cámara tiene su propio cerebro (un chip llamado IMX500) que hace todo el trabajo pesado de pensar, así que la Raspberry Pi queda libre y rápida[cite: 12].
 
 ### **✨ Los Superpoderes de Nuestro Proyecto**
 
@@ -41,47 +43,92 @@ Lo más genial es que la cámara tiene su propio cerebro (un chip llamado IMX500
 
 ### **🛠️ Tu Kit de Inventor (Materiales)**
 
-Para construir este proyecto, necesitas las piezas que vienen en el "Kit Inicial de IA Raspberry Pi® 5 4GB".
-* Una mini computadora **Raspberry Pi 5**.
-* El **Módulo de cámara con IA** (¡los ojos del proyecto!).
-* Una **Tarjeta MicroSD** de 64 GB (la memoria).
-* **Fuente de alimentación** USB-C (para darle energía).
-* Un **Disipador de calor** (un ventilador para que no se caliente).
-* Un **Cable micro HDMI a HDMI** (para conectarla a una pantalla).
+[cite_start]Para construir este proyecto, necesitas las piezas que vienen en el "Kit Inicial de IA Raspberry Pi® 5 4GB"[cite: 16].
+* [cite_start]Una mini computadora **Raspberry Pi 5**[cite: 18].
+* [cite_start]El **Módulo de cámara con IA** (¡los ojos del proyecto!)[cite: 22].
+* [cite_start]Una **Tarjeta MicroSD** de 64 GB (la memoria)[cite: 30].
+* [cite_start]**Fuente de alimentación** USB-C (para darle energía)[cite: 25].
+* [cite_start]Un **Disipador de calor** (un ventilador para que no se caliente)[cite: 33].
+* [cite_start]Un **Cable micro HDMI a HDMI** (para conectarla a una pantalla)[cite: 39].
 * Unos foquitos **LEDs** y cables para hacer las pruebas de luces.
 
 ### **🔧 La Receta Secreta (Instalación)**
 
-Antes de usar los programas, hay que preparar nuestra Raspberry Pi. ¡Es como instalar un videojuego!
+Antes de usar los programas, hay que preparar nuestra Raspberry Pi.
 
-1.  **Instala el "Cerebro" del Sistema**: Con la herramienta "Raspberry Pi Imager", instala el sistema operativo **Raspberry Pi OS (64-bit)** en tu tarjeta MicroSD.
+1.  [cite_start]**Instala el "Cerebro" del Sistema**: Con la herramienta "Raspberry Pi Imager", instala el sistema operativo **Raspberry Pi OS (64-bit)** en tu tarjeta MicroSD[cite: 53].
 
-2.  **Ponlo al Día**: Abre una ventana de "Terminal" y escribe esto para actualizar todo a la última versión.
+2.  [cite_start]**Ponlo al Día**: Abre una ventana de "Terminal" y escribe esto para actualizar todo a la última versión[cite: 57].
     ```bash
     sudo apt update && sudo apt full-upgrade -y
     ```
 
-3.  **Instala los "Drivers" de la Cámara**: Ahora, instala el software especial para que la Raspberry Pi pueda hablar con la cámara con IA.
+3.  [cite_start]**Instala los "Drivers" de la Cámara**: Ahora, instala el software especial para que la Raspberry Pi pueda hablar con la cámara con IA[cite: 88].
     ```bash
     sudo apt install imx500-all
     ```
 
-4.  **Dale Herramientas Extra a Python**: Python es el lenguaje con el que están escritos nuestros programas. Vamos a darle unas herramientas extra que necesita.
+4.  [cite_start]**Reinicia**: Para que todos los cambios funcionen, reinicia tu Raspberry Pi[cite: 90].
+    ```bash
+    sudo reboot
+    ```
+---
+
+### **🚀 Demostraciones Prácticas (del Kit)**
+
+Antes de usar nuestros scripts, puedes probar las demostraciones que ya vienen incluidas con el software de la cámara para asegurarte de que todo funciona.
+
+#### **Detección de Objetos**
+[cite_start]Con este comando, la cámara intentará identificar objetos comunes como bicicletas, perros, camiones, etc., y los marcará con un recuadro en tiempo real[cite: 96, 100].
+
+* **Ejecuta en la terminal:**
+    ```bash
+    rpicam-hello -t 0 --post-process-file /usr/share/rpi-camera-assets/imx500_mobilenet_ssd.json --viewfinder-width 1920 --viewfinder-height 1080
+    ```
+
+#### **Estimación de Pose**
+[cite_start]Este comando utiliza la cámara para detectar personas y dibujar un "esqueleto" sobre ellas, identificando sus articulaciones y postura[cite: 102, 105].
+
+* **Ejecuta en la terminal:**
+    ```bash
+    rpicam-hello -t 0 --post-process-file /usr/share/rpi-camera-assets/imx500_posenet.json --viewfinder-width 1920 --viewfinder-height 1080
+    ```
+---
+
+### **🎓 Uso Avanzado: Ejemplos de Picamera2**
+
+Si quieres ir más allá y explorar todos los ejemplos de clasificación, segmentación y más, que vienen con la librería `Picamera2`, necesitas preparar un ambiente de desarrollo especial. [cite_start]Esto es para usuarios más avanzados[cite: 107, 108].
+
+1.  [cite_start]**Instalar Dependencias de Python**: Necesitarás herramientas adicionales para el procesamiento de imágenes[cite: 143].
     ```bash
     sudo apt install python3-opencv python3-munkres
     ```
 
-5.  **Reinicia**: Para que todos los cambios funcionen, reinicia tu Raspberry Pi.
+2.  [cite_start]**Crear un Entorno Virtual**: Esto crea una "caja de arena" para instalar librerías sin afectar el sistema principal, lo cual es muy útil para evitar conflictos[cite: 146, 148].
     ```bash
-    sudo reboot
+    python3 -m venv picamera2_env
+    source picamera2_env/bin/activate
+    ```
+    (Verás `(picamera2_env)` al inicio de tu terminal. Para salir de este modo, solo escribe `deactivate`).
+
+3.  [cite_start]**Clonar el Repositorio de Picamera2**: Descarga todo el código fuente y los ejemplos de `picamera2` desde GitHub[cite: 169].
+    ```bash
+    git clone [https://github.com/raspberrypi/picamera2.git](https://github.com/raspberrypi/picamera2.git)
+    cd picamera2
     ```
 
-6.  **Activa el Puerto de Mensajes Secretos** (sólo si usarás el script de comandos seriales):
-    * En la terminal, escribe `sudo raspi-config`.
-    * Usa las flechas para ir a `Interface Options` > `Serial Port`.
-    * Te preguntará si quieres una consola de login, dile que **No**.
-    * Luego te preguntará si quieres habilitar el puerto de hardware, dile que **Sí**.
-    * Termina y reinicia la Raspberry Pi. ¡El puerto para enviar mensajes ya está abierto!
+4.  [cite_start]**Instalar Herramientas Adicionales**: Instala el "Model Compression Toolkit" y las utilidades para el sensor IMX500[cite: 174, 190].
+    ```bash
+    pip install model_compression_toolkit
+    sudo apt install imx500-tools
+    ```
+
+5.  [cite_start]**Instalar Picamera2**: Ahora que estás en la carpeta `picamera2` y dentro del entorno virtual, instala la librería[cite: 201].
+    ```bash
+    pip install .
+    ```
+
+¡Listo! [cite_start]Ahora puedes ir a la carpeta `examples` dentro de `picamera2` y ejecutar los scripts de demostración que encontrarás ahí[cite: 212].
 
 ---
 
