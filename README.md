@@ -3,9 +3,10 @@
 ¡Hola! Este es un proyecto súper genial desarrollado por **AG Electrónica SAPI de CV** donde le daremos superpoderes a una cámara. Usaremos una **Raspberry Pi** (una mini computadora) y una **cámara con Inteligencia Artificial** para que entienda nuestros gestos.
 
 Imagina que puedes controlar las luces de tu cuarto... ¡con solo levantar la mano! O enviar mensajes secretos a otros aparatos... ¡cruzando los brazos! ¡Vamos a construirlo!
-![Demostración del control por gestos](https://github.com/desarrolloag/control-por-gestos-raspberry-pi/blob/main/ControlLuminariasIA.gif?raw=true)
 
 ---
+
+![Demostración del control por gestos](https://github.com/desarrolloag/control-por-gestos-raspberry-pi/blob/main/ControlLuminariasIA.gif?raw=true)
 
 ## 🗺️ **Lo que encontrarás en este súper folder:**
 
