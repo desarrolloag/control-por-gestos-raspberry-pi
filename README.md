@@ -1,4 +1,4 @@
-# ¡Crea un Controlador de Luminarias Inteligente con tu Raspberry Pi! 👋🤖
+# ¡Crea un Controlador de Luminarias Inteligente con tu Raspberry Pi!
 
 ¡Hola! Este es un proyecto súper genial desarrollado por **AG Electrónica SAPI de CV** donde le daremos superpoderes a una cámara. Usaremos una **Raspberry Pi** (una mini computadora) y una **cámara con Inteligencia Artificial** para que entienda nuestros gestos.
 
@@ -14,7 +14,7 @@ Imagina que puedes controlar las luces de tu cuarto... ¡con solo levantar la ma
 * [La Receta Secreta (Instalación)](#-la-receta-secreta-instalación)
 * [Demostraciones Prácticas (del Kit)](#-demostraciones-prácticas-del-kit)
 * [Uso Avanzado: Ejemplos de Picamera2](#-uso-avanzado-ejemplos-de-picamera2)
-* [¡A Jugar! (Nuestros Scripts Personalizados)](#-a-jugar-nuestros-scripts-personalizados)
+* [¡A Jugar! (Cómo Usarlo)](#-a-jugar-nuestros-scripts-personalizados)
 * [¿Necesitas Ayuda?](#-necesitas-ayuda)
 
 ---
