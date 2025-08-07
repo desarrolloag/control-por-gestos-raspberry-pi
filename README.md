@@ -14,7 +14,7 @@ Imagina que puedes controlar las luces de tu cuarto... ¡con solo levantar la ma
 * [La Receta Secreta (Instalación)](#-la-receta-secreta-instalación)
 * [Demostraciones Prácticas (del Kit)](#-demostraciones-prácticas-del-kit)
 * [Uso Avanzado: Ejemplos de Picamera2](#-uso-avanzado-ejemplos-de-picamera2)
-* [¡A Jugar! (Cómo Usarlo)](#-a-jugar-nuestros-scripts-personalizados)
+* [¡A Jugar! (Cómo Usarlo)](#-a-jugar-Cómo-Usarlo)
 * [¿Necesitas Ayuda?](#-necesitas-ayuda)
 
 ---
