@@ -3,6 +3,7 @@
 ¡Hola! Este es un proyecto súper genial desarrollado por **AG Electrónica SAPI de CV** donde le daremos superpoderes a una cámara. Usaremos una **Raspberry Pi** (una mini computadora) y una **cámara con Inteligencia Artificial** para que entienda nuestros gestos.
 
 Imagina que puedes controlar las luces de tu cuarto... ¡con solo levantar la mano! O enviar mensajes secretos a otros aparatos... ¡cruzando los brazos! ¡Vamos a construirlo!
+![Demostración del control por gestos](https://github.com/desarrolloag/control-por-gestos-raspberry-pi/blob/main/control_luminarias.gif?raw=true)
 
 ---
 
@@ -149,7 +150,6 @@ Para empezar, ve a la carpeta `src` en la terminal y ejecuta este comando:
 ```bash
 python3 "Control de luminarias por detección de pose.py"
 ```
-![Demostración del control por gestos](https://github.com/desarrolloag/control-por-gestos-raspberry-pi/blob/main/control_luminarias.gif?raw=true)
 #### **Modo 2: Envío de Comandos Secretos**
 Este script envía palabras clave por el puerto serie. Un aparato que esté escuchando puede recibir estos "mensajes secretos" y hacer algo.
 
